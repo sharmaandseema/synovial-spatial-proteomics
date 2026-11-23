@@ -1,0 +1,303 @@
+
+Running: 00_setup.R 
+          folder exists
+1        scripts   TRUE
+2       data_raw   TRUE
+3 data_processed   TRUE
+4        results   TRUE
+5        figures   TRUE
+6           docs   TRUE
+[1] TRUE
+        package available
+tiff       tiff      TRUE
+readxl   readxl      TRUE
+ggplot2 ggplot2      TRUE
+
+Running: 01_prepare_packages.R 
+          folder exists
+1        scripts   TRUE
+2       data_raw   TRUE
+3 data_processed   TRUE
+4        results   TRUE
+5        figures   TRUE
+6           docs   TRUE
+[1] TRUE
+        package available
+tiff       tiff      TRUE
+readxl   readxl      TRUE
+ggplot2 ggplot2      TRUE
+
+Running: 02_download_data.R 
+                    file size_MB checksum_matches
+1 DeLima2023-IMC-RAW.zip   335.5             TRUE
+
+Running: 03_inspect_archive.R 
+Number of archive entries: 1898 
+                                        Name Length                Date
+                                  data_tiff/      0 2023-10-27 11:38:00
+                            data_tiff/004-H/      0 2022-05-18 08:52:00
+                          data_tiff/002-D-G/      0 2022-05-18 08:51:00
+                          data_tiff/003-B-E/      0 2022-05-18 08:52:00
+            data_tiff/ImageNb_PatientID.xlsx  13067 2023-10-27 11:24:00
+ __MACOSX/data_tiff/._ImageNb_PatientID.xlsx    244 2023-10-27 11:39:00
+          data_tiff/._ImageNb_PatientID.xlsx   4096 2023-10-27 11:38:00
+                          data_tiff/SM3-SM7/      0 2023-10-27 11:32:00
+                       data_tiff/._.DS_Store   4096 2023-10-27 11:24:00
+                          data_tiff/001-A-C/      0 2023-10-27 11:29:00
+                          data_tiff/SM1-SM8/      0 2022-05-18 08:53:00
+                         data_tiff/.DS_Store   6148 2023-10-27 11:37:00
+              __MACOSX/data_tiff/._.DS_Store    120 2023-10-27 11:39:00
+                          data_tiff/SM5-SM6/      0 2022-05-18 08:55:00
+                          data_tiff/SM4-SM2/      0 2022-05-18 08:55:00
+
+Spreadsheets and documentation:
+                                        Name Length                Date
+            data_tiff/ImageNb_PatientID.xlsx  13067 2023-10-27 11:24:00
+ __MACOSX/data_tiff/._ImageNb_PatientID.xlsx    244 2023-10-27 11:39:00
+          data_tiff/._ImageNb_PatientID.xlsx   4096 2023-10-27 11:38:00
+
+Running: 04_inspect_sample_info.R 
+Sheet names:
+[1] "Feuil1"
+-/                                                                            /                                                                            -                                                                            
+Table dimensions (rows, columns):
+[1] 40  6
+
+Column names:
+[1] "...1"       "file_name"  "sample_id"  "condition"  "patient_id"
+[6] "FigS1_id"  
+
+First 10 rows:
+# A tibble: 10 × 6
+    ...1 file_name       sample_id   condition  patient_id FigS1_id    
+   <dbl> <chr>           <chr>       <chr>      <chr>      <chr>       
+ 1     1 A-Zone1a.fcs    A-Zone1a    Active RA  Patient1   RA1 baseline
+ 2     2 A-Zone1b.fcs    A-Zone1b    Active RA  Patient1   RA1 baseline
+ 3     3 A-Zone2cbis.fcs A-Zone2cbis Active RA  Patient1   RA1 baseline
+ 4     4 B-Zone1.fcs     B-Zone1     6 month RA Patient2   RA1 6 months
+ 5     5 B-Zone2.fcs     B-Zone2     6 month RA Patient2   RA1 6 months
+ 6     6 C-Zone1.fcs     C-Zone1     Active RA  Patient3   RA2 baseline
+ 7     7 C-Zone2.fcs     C-Zone2     Active RA  Patient3   RA2 baseline
+ 8     8 D-Zone1a.fcs    D-Zone1a    6 month RA Patient4   RA2 6 months
+ 9     9 D-Zone1b.fcs    D-Zone1b    6 month RA Patient4   RA2 6 months
+10    10 D-Zone2.fcs     D-Zone2     6 month RA Patient4   RA2 6 months
+Number of TIFF files:
+[1] 1800
+
+First 20 TIFF paths:
+ [1] "data_tiff/004-H/H-Zone1/Osteopontin_Er170.tiff"
+ [2] "data_tiff/004-H/H-Zone1/CD206_Yb176.tiff"      
+ [3] "data_tiff/004-H/H-Zone1/Ki67_Er168.tiff"       
+ [4] "data_tiff/004-H/H-Zone1/HLADR_Yb174.tiff"      
+ [5] "data_tiff/004-H/H-Zone1/aSMA_Pr141.tiff"       
+ [6] "data_tiff/004-H/H-Zone1/CD138_Nd150.tiff"      
+ [7] "data_tiff/004-H/H-Zone1/I127_I127.tiff"        
+ [8] "data_tiff/004-H/H-Zone1/Ba138_Ba138.tiff"      
+ [9] "data_tiff/004-H/H-Zone1/Xe134_Xe134.tiff"      
+[10] "data_tiff/004-H/H-Zone1/Pb208_Pb208.tiff"      
+[11] "data_tiff/004-H/H-Zone1/CD11c_Sm154.tiff"      
+[12] "data_tiff/004-H/H-Zone1/CLEC10A_Sm149.tiff"    
+[13] "data_tiff/004-H/H-Zone1/CD66b_Dy163.tiff"      
+[14] "data_tiff/004-H/H-Zone1/FoxP3_Gd155.tiff"      
+[15] "data_tiff/004-H/H-Zone1/CD90_Nd148.tiff"       
+[16] "data_tiff/004-H/H-Zone1/Xe131_Xe131.tiff"      
+[17] "data_tiff/004-H/H-Zone1/CCR2_Ho165.tiff"       
+[18] "data_tiff/004-H/H-Zone1/DiArgon_ArAr80.tiff"   
+[19] "data_tiff/004-H/H-Zone1/eBCKG_BCKG190.tiff"    
+[20] "data_tiff/004-H/H-Zone1/DNA1_Ir191.tiff"       
+
+Image folders:
+ [1] "data_tiff/004-H/H-Zone1"          "data_tiff/004-H/H-Zone2a"        
+ [3] "data_tiff/004-H/H-Zone2b"         "data_tiff/002-D-G/G-Zone2b"      
+ [5] "data_tiff/002-D-G/D-Zone1a"       "data_tiff/002-D-G/D-Zone2"       
+ [7] "data_tiff/002-D-G/G-Zone2a"       "data_tiff/002-D-G/D-Zone1b"      
+ [9] "data_tiff/002-D-G/G-Zone2c"       "data_tiff/002-D-G/G-Zone1"       
+[11] "data_tiff/003-B-E/E-Zone1"        "data_tiff/003-B-E/E-Zone2a"      
+[13] "data_tiff/003-B-E/E-Zone2c"       "data_tiff/003-B-E/E-Zone2b"      
+[15] "data_tiff/003-B-E/B-Zone1"        "data_tiff/003-B-E/B-Zone2"       
+[17] "data_tiff/SM3-SM7/SM7-Zone2a"     "data_tiff/SM3-SM7/SM7-Zone1a"    
+[19] "data_tiff/SM3-SM7/SM7-Zone1b"     "data_tiff/SM3-SM7/SM7-Zone2b"    
+[21] "data_tiff/SM3-SM7/SM3-Zone2"      "data_tiff/001-A-C/A-Zone1a"      
+[23] "data_tiff/001-A-C/C-Zone1"        "data_tiff/001-A-C/A-Zone1b"      
+[25] "data_tiff/001-A-C/A-Zone2cbis"    "data_tiff/001-A-C/C-Zone2"       
+[27] "data_tiff/SM1-SM8/SM1-Zone1"      "data_tiff/SM1-SM8/SM1-Zone3"     
+[29] "data_tiff/SM1-SM8/SM8-Zone2"      "data_tiff/SM1-SM8/SM1-Zone2"     
+[31] "data_tiff/SM1-SM8/SM1-Zone4"      "data_tiff/SM1-SM8/SM8-Zone1"     
+[33] "data_tiff/SM5-SM6/SM6-Zone3"      "data_tiff/SM5-SM6/SM5-Zone2"     
+[35] "data_tiff/SM5-SM6/SM5-Zone1"      "data_tiff/SM5-SM6/SM6-Zone1split"
+[37] "data_tiff/SM4-SM2/SM2-Zone1"      "data_tiff/SM4-SM2/SM4-Zone2"     
+[39] "data_tiff/SM4-SM2/SM4-Zone1"      "data_tiff/SM4-SM2/SM2-Zone2"     
+
+Running: 05_extract_first_region.R 
+Region: A-Zone1a
+Number of TIFF files: 45 
+
+ [1] "001-A-C-Londres_ROI-bis_s0_a1_ac_ilastik_s2_Probabilities_mask.tiff"
+ [2] "aSMA_Pr141.tiff"                                                    
+ [3] "Ba138_Ba138.tiff"                                                   
+ [4] "C1QA_Dy161.tiff"                                                    
+ [5] "Casp3_Yb172.tiff"                                                   
+ [6] "CCR2_Ho165.tiff"                                                    
+ [7] "CD11c_Sm154.tiff"                                                   
+ [8] "CD138_Nd150.tiff"                                                   
+ [9] "CD14_Nd144.tiff"                                                    
+[10] "CD16_Nd146.tiff"                                                    
+[11] "CD163_Sm147.tiff"                                                   
+[12] "CD20_Nd142.tiff"                                                    
+[13] "CD206_Yb176.tiff"                                                   
+[14] "CD3_Sm152.tiff"                                                     
+[15] "CD31_Eu151.tiff"                                                    
+[16] "CD4_Gd156.tiff"                                                     
+[17] "CD45_Y89.tiff"                                                      
+[18] "CD66b_Dy163.tiff"                                                   
+[19] "CD68_Tb159.tiff"                                                    
+[20] "CD8_Dy162.tiff"                                                     
+[21] "CD90_Nd148.tiff"                                                    
+[22] "CLEC10A_Sm149.tiff"                                                 
+[23] "Coll1_Tm169.tiff"                                                   
+[24] "DiArgon_ArAr80.tiff"                                                
+[25] "DNA1_Ir191.tiff"                                                    
+[26] "DNA2_Ir193.tiff"                                                    
+[27] "eBCKG_BCKG190.tiff"                                                 
+[28] "FoxP3_Gd155.tiff"                                                   
+[29] "GrB_Er167.tiff"                                                     
+[30] "HLADR_Yb174.tiff"                                                   
+[31] "I127_I127.tiff"                                                     
+[32] "Iba1_Eu153.tiff"                                                    
+[33] "IFI6_Er166.tiff"                                                    
+[34] "Il1b_Gd160.tiff"                                                    
+[35] "Ki67_Er168.tiff"                                                    
+[36] "Lyve1_Nd145.tiff"                                                   
+[37] "MERTK_Yb173.tiff"                                                   
+[38] "Osteopontin_Er170.tiff"                                             
+[39] "Pb208_Pb208.tiff"                                                   
+[40] "Podoplanin_Dy164.tiff"                                              
+[41] "S100A12_Gd158.tiff"                                                 
+[42] "Tim4_Yb171.tiff"                                                    
+[43] "Vim_Nd143.tiff"                                                     
+[44] "Xe131_Xe131.tiff"                                                   
+[45] "Xe134_Xe134.tiff"                                                   
+
+Running: 06_inspect_image_values.R 
+ image rows columns nonfinite_pixels minimum maximum all_values_integer
+  DNA1 1298     439                0       0    2635               TRUE
+  CD68 1298     439                0       0      49               TRUE
+  mask 1298     439                0       0    3784               TRUE
+
+Running: 07_plot_DNA1.R 
+Figure saved: TRUE 
+
+Running: 08_inspect_mask.R 
+Number of positive mask labels:
+[1] 3784
+
+Largest label number:
+[1] 3784
+
+Percentage of pixels labelled zero:
+[1] 70.4
+
+Object sizes in pixels:
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   4.00   31.00   43.00   44.55   56.00  138.00 
+
+Running: 09_plot_mask_overlay.R 
+Number of positive mask labels: 3784 
+Figure saved: TRUE 
+Positive mask labels: 3784 
+Overlay figure saved: TRUE 
+
+Running: 10_plot_segmentation_closeup.R 
+Crop rows: 575 724 
+Crop columns: 145 294 
+Figure saved: TRUE 
+
+Running: 11_plot_CD68.R 
+DNA1 CD68 
+ 130    8 
+Figure saved: TRUE 
+
+Running: 12_measure_first_region.R 
+Number of measured objects: 3784 
+ region_id mask_label area_pixels  x_column    y_row DNA1_mean CD68_mean
+  A-Zone1a          1          17  33.82353 1.764706  7.411765 0.2352941
+  A-Zone1a          2          40 100.22500 2.775000 12.250000 0.4750000
+  A-Zone1a          3           9 184.00000 1.555556 12.444444 1.2222222
+  A-Zone1a          4           8 223.00000 1.375000 16.500000 1.0000000
+  A-Zone1a          5          22 237.50000 2.363636 26.818182 1.0909091
+  A-Zone1a          6          25 248.72000 2.280000 24.520000 0.7200000
+
+Average CD68 signal across objects:
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 0.0000  0.3527  0.5966  0.7885  1.0000  8.4265 
+
+Table saved: TRUE 
+
+Running: 13_plot_CD68_object_map.R 
+Map saved: TRUE 
+
+Running: 14_flag_boundary_objects.R 
+                     group objects percent
+        Touches image edge      25     0.7
+ Does not touch image edge    3759    99.3
+
+QC table saved: TRUE 
+
+Running: 15_check_image_edge_sensitivity.R 
+                   analysis number_of_objects mean_CD68 median_CD68
+                All objects              3784    0.7885      0.5966
+ Exclude image-edge objects              3759    0.7869      0.5962
+ percentile_90_CD68
+              1.533
+              1.530
+
+Comparison saved: TRUE 
+
+Running: 16_add_protein_measurements.R 
+Number of objects: 3784 
+   CD68_mean         CD3_mean        CD31_mean      
+ Min.   :0.0000   Min.   :0.0000   Min.   :0.00000  
+ 1st Qu.:0.3527   1st Qu.:0.2750   1st Qu.:0.05556  
+ Median :0.5966   Median :0.4643   Median :0.10638  
+ Mean   :0.7885   Mean   :0.5517   Mean   :0.15190  
+ 3rd Qu.:1.0000   3rd Qu.:0.7333   3rd Qu.:0.19231  
+ Max.   :8.4265   Max.   :3.1034   Max.   :2.48387  
+
+Expanded table saved: TRUE 
+
+Running: 17_plot_protein_distributions.R 
+Distribution figure saved: TRUE 
+
+Running: 18_plot_CD3_CD31_maps.R 
+Histogram saved: TRUE 
+CD3 map saved: TRUE 
+CD31 map saved: TRUE 
+
+Running: 19_measure_nearest_neighbours.R 
+       statistic distance_pixels
+         Minimum        3.181329
+ 25th percentile        5.147437
+          Median        5.923777
+            Mean        6.481814
+ 75th percentile        7.015724
+         Maximum       44.442597
+
+Spatial table saved: TRUE 
+
+Running: 20_check_distance_edge_sensitivity.R 
+                                analysis number_of_objects mean_pixels
+                             All objects              3784       6.482
+ Exclude image-edge objects from summary              3759       6.446
+ median_pixels percentile_90_pixels maximum_pixels
+         5.924                8.623          44.44
+         5.918                8.581          44.44
+
+Comparison saved: TRUE 
+
+Running: 21_plot_neighbour_distance_map.R 
+Distance map saved: TRUE 
+
+Measurement table comparison:
+[1] TRUE
+
+RERUN COMPLETED SUCCESSFULLY

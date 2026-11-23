@@ -1,0 +1,11 @@
+Initial segmentation review: A-Zone1a
+
+The mask contains 3,784 distinct positive labels.
+A central 150 x 150 pixel crop was visually inspected.
+Many boundaries surround DNA-bright structures.
+Large dark spaces are mostly unlabelled.
+
+Limitations:
+DNA1 alone cannot validate whole-cell boundaries.
+One crop does not establish segmentation quality across the region.
+The supplied mask is retained unchanged for exploratory learning.
